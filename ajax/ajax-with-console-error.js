@@ -10,7 +10,7 @@ $(document).on("click",".download-btn",function(e) {
       url: ajaxurl,
       dataType: 'json',
       data: {
-          'action': 'get_data_progress',
+          'action': 'ajax_function',
           'form_id' : form_id,
           'post_id'  : post_id,
           'nonce'    : nonce,
