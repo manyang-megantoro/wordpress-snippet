@@ -1,0 +1,21 @@
+   jQuery(document).ready(function($) {
+       $.ajax( {
+           url: apiSettings.root + 'atapx/v1/all_rekap/he2323lloXsae/xsaduhUSH23/year=' + $('#tahun-paket').val(),
+           method: 'GET',
+           beforeSend: function ( xhr ) {
+               xhr.setRequestHeader( 'X-WP-Nonce', apiSettings.nonce );
+           },
+           data:{
+               'title' : 'Hello Moon'
+           }
+       } ).done( function ( response ) {
+           if(response.status == 'Success'){
+             $('#table-rincian-paket').bootstrapTable({
+               data: response.rows,
+               // columns: response.columns
+             });
+           }else{
+             alert(response.eror);
+           }
+       } );
+   });
