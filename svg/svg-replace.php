@@ -15,3 +15,4 @@
                         echo '<span class="svg-icon svg-icon-primary svg-icon-2x">' . $svg_file_new . '</span>';
 
                         ?>
+https://stackoverflow.com/questions/28377773/php-str-replace-with-wild-card
